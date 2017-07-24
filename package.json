@@ -1,0 +1,35 @@
+{
+  "name": "websocket-animation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --inline --content-base public/ --history-api-fallback"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamsail/websocket-animation.git"
+  },
+  "author": "sail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamsail/websocket-animation/issues"
+  },
+  "homepage": "https://github.com/iamsail/websocket-animation#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.1",
+    "json-loader": "^0.5.4",
+    "postcss-loader": "^2.0.5",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "ws": "^2.3.1"
+  }
+}
