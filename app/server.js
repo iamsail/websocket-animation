@@ -7,7 +7,7 @@ var fs   = require("fs");
 
 var server = http.createServer(function(request,response){
     var pathname = url.parse(request.url).pathname;
-    if(pathname === '../public/index.html' || pathname === '/style.css' || pathname === '/main.js' || pathname === '../public/bundle.js'){
+    if(pathname === '/public/index.html' || pathname === '/style.css' || pathname === '/main.js' || pathname === '/public/bundle.js'){
         //fs.readFile('/index.html');
         //fs.readFile('index.html');
         fs.readFile(__dirname + pathname,'binary',function(err,file){
@@ -16,7 +16,7 @@ var server = http.createServer(function(request,response){
                 response.end();
             }else{
                 response.writeHead(200,{
-                    'Content-Type': pathname === '../public/index.html' ? 'text/html' : pathname === '/style.css' ? 'text/css' :  'text/js'
+                    'Content-Type': pathname === '/public/index.html' ? 'text/html' : pathname === '/style.css' ? 'text/css' :  'text/js'
                 });
                 response.write(file,"binary");
                 response.end();
@@ -35,7 +35,7 @@ server.listen(port);
 
 
 var WebSocket = require('ws');
-var wss = new WebSocket.Server({ port: 8082 });
+var wss = new WebSocket.Server({ port: 8083 });
 var serverInfo = {
     x:null,
     y:null,
