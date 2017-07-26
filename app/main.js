@@ -1,6 +1,6 @@
 require('./style.css');
-// var ws = new WebSocket("ws://123.207.83.243:8082/");
 var ws = new WebSocket("ws://123.207.83.243:8083/");
+// var ws = new WebSocket("ws://127.0.0.1:8083/");
 var log = console.log.bind(console);
 var info ={
     x:null,
