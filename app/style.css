@@ -14,8 +14,7 @@ a, img, ol, ul, li
     height:200px;
     width:200px;
     -webkit-transform-style:preserve-3d;
-    /*animation:  10s rocube ease infinity;*/
-    animation:  sail 40s ease-in-out infinite both
+    /*transform: rotateX(300deg) rotateY(400deg) rotateZ(2606deg);*/
 }
 .face{
     position:absolute;
@@ -49,12 +48,4 @@ a, img, ol, ul, li
 }
 #face6 {
     -webkit-transform: translateZ(-200px);
-}
-@keyframes sail {
-    0%{
-        transform:  rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    }
-    50%{
-        transform:  rotateX(3500deg) rotateY(4500deg) rotateZ(2606deg);
-    }
 }
