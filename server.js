@@ -7,7 +7,7 @@ var fs   = require("fs");
 
 var server = http.createServer(function(request,response){
     var pathname = url.parse(request.url).pathname;
-    if(pathname === '/public/index.html' || pathname === '/style.css' || pathname === '/main.js' || pathname === '/public/bundle.js'){
+    if(pathname === '/index.html' || pathname === '/bundle.js'){
         //fs.readFile('/index.html');
         //fs.readFile('index.html');
         fs.readFile(__dirname + pathname,'binary',function(err,file){
@@ -16,7 +16,7 @@ var server = http.createServer(function(request,response){
                 response.end();
             }else{
                 response.writeHead(200,{
-                    'Content-Type': pathname === '/public/index.html' ? 'text/html' : pathname === '/style.css' ? 'text/css' :  'text/js'
+                    'Content-Type': pathname === '/index.html' ? 'text/html' : pathname === '/style.css' ? 'text/css' :  'text/js'
                 });
                 response.write(file,"binary");
                 response.end();
