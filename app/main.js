@@ -50,10 +50,11 @@ function handleOrientation(event) {
         info.x = event.beta;
         $('console').innerHTML = "Z轴："+event.alpha+"</br>X轴："+event.beta+"</br>Y轴："+event.gamma;
         log("Z轴："+event.alpha+"</br>X轴："+event.beta+"</br>Y轴："+event.gamma);
-        log("执行了==== ");
+        log(" ===执行了==== ");
 
         if(width < 650){ //手机发送自身的位置信息给服务端进行广播
             ws.send(Json.stringify(info));
+            log("=======数据发送到后台成功=====")
         }
 }
 window.addEventListener('deviceorientation', handleOrientation);

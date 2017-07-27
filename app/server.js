@@ -36,6 +36,7 @@ server.listen(port);
 
 var WebSocket = require('ws');
 var wss = new WebSocket.Server({ port: 8083 });
+var log = console.log.bind(console);
 var serverInfo = {
     x:null,
     y:null,
@@ -53,6 +54,7 @@ wss.broadcast = function broadcast(data) {
 
 wss.on('connection', function connection(ws) {
     ws.on('message', function incoming(message) {
+        log("====接受来自前台的数据====");
         var json = JSON.prase(message); // 客户端传来的数据
         // for(var i = 0;i <= 360;i++){
         //     serverInfo.x++;
