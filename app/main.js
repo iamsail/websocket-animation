@@ -1,7 +1,7 @@
 require('./style.css');
 var ws = new WebSocket("ws://123.207.83.243:8083/");
 // var ws = new WebSocket("ws://127.0.0.1:8083/");
-var log = console.log.bind(console);
+
 var info ={
     x:null,
     y:null,
@@ -53,7 +53,7 @@ function handleOrientation(event) {
         log(" ===执行了==== ");
 
         if(width < 650){ //手机发送自身的位置信息给服务端进行广播
-            ws.send(Json.stringify(info));
+            ws.send(JSON.stringify(info));
             log("=======数据发送到后台成功=====")
         }
 }
