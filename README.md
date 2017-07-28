@@ -31,3 +31,15 @@ websocket
 - `npm start` `npm run build`
 
 - `node app/server.js` 
+
+### 相关博文链接
+
+- [再谈旋转的立方体](http://www.sail.name/2017/07/28/talk-rotary-cube-again/)
+- [Web sockets基础知识](http://www.sail.name/2017/06/19/the-basic-knowledge-of-Web-Sockets/)
+- [deviceorientation](http://www.sail.name/2017/07/08/deviceorientation/)
+(待更新)
+
+### 相关项目
+
+- [online-chat(基于websocket的在线聊天室)](https://github.com/iamsail/online-chat)
+- [random(随机器)](https://github.com/iamsail/random)
